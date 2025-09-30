@@ -5,7 +5,7 @@ A robust **ASP.NET Core MVC application** built with **Entity Framework Core (EF
 ---
 
 ## 🔹 Features
-- 👨‍💼 **Employee Management** – Add, edit, delete, and list emplo
+- 👨‍💼 **Employee Management** – Add, edit, delete, and list employ
 - 🏢 **Department Integration** – Assign employees to departments
 - 🔑 **Password Change** – Update employee passwords with validation
 - 🎨 **Responsive UI** – Styled using Bootstrap
