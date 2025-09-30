@@ -1,0 +1,44 @@
+﻿@model List<CoreApp.Models.Employee>
+<head>
+    <title>Add</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<div style="font-family:Calibri; padding:20px; margin:10px; border:solid thin blue">
+
+    <div style="height:100px; padding:10px; vertical-align:middle; align-content:center">
+        <a asp-action="Add" asp-asp-controller="Employee" class="btn btn-primary">Add New Employee</a>
+    </div>
+
+    <div style="padding:10px">
+        <table class="table table-active">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile </th>
+                <th>SkillSet</th>
+                <th>Department</th>
+                <th>Password</th>
+                <th colspan="3">Manage Employee</th>
+            </tr>
+            @foreach (var e in Model)
+            {
+                <tr>
+                    <td>@e.Id</td>
+                    <td>@e.Name</td>
+                    <td>@e.Email</td>
+                    <td>@e.Mobile</td>
+                    <td>@e.SkillSet</td>
+                    <td>@e.Department.DepartmentName</td>
+                    <td>@e.Password</td>
+
+                    <td><a class="btn btn-secondary" asp-action="Edit" asp-route-id="@e.Id" style="width:70px">Edit</a></td>
+                    <td><a onclick="return confirm('R u sure u wants to delete?')"  class="btn btn-warning" asp-action="Delete" asp-route-id="@e.Id" style="width:70px">Delete</a></td>
+                    <td><a class="btn btn-primary" asp-action="ChangePassword" asp-route-id="@e.Id" style="width:70px">Password</a></td>
+
+
+              </tr>
+            }
+        </table>
+        </div>
+</div>

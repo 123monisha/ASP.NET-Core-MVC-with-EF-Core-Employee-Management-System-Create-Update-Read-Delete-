@@ -1,0 +1,58 @@
+﻿@model CoreApp.Models.Employee
+<head>
+    <title>Add</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+<div style="font-family:Calibri;padding:10px; margin:20px ; width:70%">
+    <div style="text-align:center;vertical-align:middle">
+        <h3>Employee Registration</h3>
+    </div>
+    <hr />
+    <div style="width:50%; border:solid thin blue">
+        <form asp-action="Save" asp-controller="Employee">
+                
+               <input type="hidden" class="form-control" asp-for="Id" />
+                
+            <div style="margin-top:10px">
+                <div>Name</div>
+                <div><input type="text" class="form-control" asp-for="Name" /></div>
+            </div>
+            <div style="margin-top:10px">
+                
+                <div>Email</div>
+                <div><input type="text" class="form-control" asp-for="Email" /></div>
+            </div>
+            <div style="margin-top:10px">
+                
+                <div>Mobile</div>
+                <div><input type="text" class="form-control" asp-for="Mobile" /></div>
+            </div>
+            <div style="margin-top:10px">
+             
+                <div>Skillset</div>
+                <div><input type="text" class="form-control" asp-for="SkillSet" /></div>
+            </div>
+            <div style="margin-top:10px">
+                
+                <div>Passwword</div>
+                <div><input type="text" class="form-control" asp-for="Password" /></div>
+            </div>
+
+            <div style="margin-top:10px">
+                <div>Choose Departments </div>
+                <div>
+                    @Html.DropDownListFor(m => m.DepartmentId, new SelectList(ViewBag.Department, "Id", "DepartmentName"), "choose Department", new { @class = "form-conrol" })
+                </div>
+            </div>
+            <div style="margin-top:10px">
+                <div style="display:inline-block; margin:10px; width:45%"><button type="button" class="btn btn-warning">cancel</button></div>
+                <div style="display:inline-block; margin:10px; width:45%"><button type="submit" class="btn btn-success">Save Employee</button></div>
+
+            </div>
+        </form>
+    </div>
+
+
+</div>
+</body>
