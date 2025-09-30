@@ -31,16 +31,15 @@ This project is designed as a **practical learning example** for developers expl
 1. **Clone the Repository**  
    ```bash
    git clone https://github.com/your-username/AspNetCore-EmployeeManagementSystem.git
-Update the Connection String
-Open the appsettings.json file and update the connection string to match your database configuration.
+2. **Update the Connection String**  
+   ```bash
+   Open the appsettings.json file and update the connection string to match your database configuration.
 
-Run Migrations to Create the Database
+3. **Run Migrations to Create the Database**  
+   ```bash
+   dotnet ef database update
 
-bash
-Copy code
-dotnet ef database update
-Run the Project
 
-bash
-Copy code
-dotnet run
+4. **Run the Project**  
+   ```bash
+  dotnet run
